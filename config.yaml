@@ -1,0 +1,77 @@
+# Sylva Cortex — central configuration
+# Every DSP and agent hyperparameter lives here. Modules receive values as
+# arguments; nothing reads this file from inside a function.
+
+audio:
+  sample_rate: 16000        # Hz. 16k is sufficient for the target classes and
+                            # keeps the browser AudioWorklet cheap.
+  frame_ms: 25              # Analysis window length.
+  hop_ms: 10                # 60% overlap — standard for speech/audio features.
+  window: hann              # Hann taper minimises spectral leakage.
+
+preprocess:
+  dc_removal: true          # Remove slow DC drift from sensor bias.
+  preemphasis_coeff: 0.97   # First-order high-pass; standard in MFCC pipelines.
+  bandpass_low_hz: 80       # Below this is mostly wind and handling noise.
+  bandpass_high_hz: 8000    # Above this is largely insect hiss / sensor noise.
+  bandpass_order: 4         # Butterworth order. 4 gives a flat passband.
+
+denoise:
+  method: spectral_subtraction
+  noise_percentile: 10      # Assume the quietest 10% of frames are noise-only.
+  oversubtraction_alpha: 2.0  # Aggressiveness. Swept in ablation E2.
+  spectral_floor_beta: 0.02   # Residual floor; prevents musical-noise artefacts.
+  gain_smoothing_frames: 3    # Temporal smoothing of the Wiener-style gain.
+
+segmentation:
+  onset_k_mad: 3.0          # Threshold = median energy + k * MAD.
+  min_segment_ms: 60        # Discard shorter than this.
+  merge_gap_ms: 150         # Merge onsets closer than this into one event.
+
+features:
+  n_mels: 40
+  n_mfcc: 13
+  include_deltas: true      # Adds Δ and ΔΔ MFCCs.
+  compute_flatness: true
+  compute_crest: true
+  compute_attack_time: true
+
+model:
+  type: hist_gradient_boosting   # Stage 1 baseline. Switch to cnn if time allows.
+  random_state: 42
+  test_split: 0.2
+  classes:
+    - bird_call
+    - mammal_call
+    - insect
+    - rain
+    - wind
+    - chainsaw
+    - gunshot
+    - vehicle
+    - human_speech
+    - unknown
+
+agent:
+  belief_decay: 0.95        # Per-tick multiplicative decay of class posteriors.
+  reinforce_window_s: 5.0   # Detections within this window reinforce each other.
+  initial_threshold: 0.70   # Starting decision threshold per class.
+  target_precision: 0.85    # Adaptation aims for this precision per class.
+  threshold_step: 0.02      # Proportional controller step size.
+  threshold_min: 0.40
+  threshold_max: 0.95
+  context_multipliers:      # Prior modulation by situation.
+    night_core_zone: 1.30   # Nighttime inside a protected core zone.
+    day_concession: 0.80    # Daytime near a licensed logging concession.
+    storm: 0.90             # Bad weather raises false-positive risk.
+
+evaluation:
+  snr_levels_db: [-10, -5, 0, 5, 10, 15, 20]
+  mixtures_per_cell: 20
+  seed: 1337
+
+paths:
+  data_dir: data
+  results_dir: results
+  figures_dir: figures
+  model_dir: models
