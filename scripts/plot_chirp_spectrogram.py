@@ -77,3 +77,4 @@ if __name__ == "__main__":
     out_file = Path("figures/synthetic_chirp_spectrogram.png")
     spec = generate_and_save_chirp_spectrogram(out_file)
     print(f"Spectrogram saved successfully to {out_file} (shape {spec.shape})")
+
