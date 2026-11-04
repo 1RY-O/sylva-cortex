@@ -1,0 +1,120 @@
+{
+  "experiment": "E2_dsp_denoising_ablation",
+  "description": "Comparison of classifier performance with vs without classical spectral subtraction denoising",
+  "cv_5fold": {
+    "raw": {
+      "mean_accuracy": 0.9905395057431257,
+      "std_accuracy": 0.007104085188534532,
+      "mean_f1_macro": 0.990612970200879,
+      "std_f1_macro": 0.007074549430882516
+    },
+    "denoised": {
+      "mean_accuracy": 0.9881726418378001,
+      "std_accuracy": 0.006488290410489296,
+      "mean_f1_macro": 0.9881917627645477,
+      "std_f1_macro": 0.006527123903829944
+    },
+    "overall_cv_f1_gain": -0.0024212074363313407
+  },
+  "by_snr": {
+    "-10": {
+      "snr_db": -10.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 0.975,
+        "f1_macro": 0.9749530173150198
+      },
+      "denoised": {
+        "accuracy": 0.95,
+        "f1_macro": 0.9498115968247621
+      },
+      "f1_improvement": -0.025141420490257693
+    },
+    "-5": {
+      "snr_db": -5.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "denoised": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "f1_improvement": 0.0
+    },
+    "0": {
+      "snr_db": 0.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 0.9916666666666667,
+        "f1_macro": 0.9916614550760893
+      },
+      "denoised": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "f1_improvement": 0.008338544923910729
+    },
+    "5": {
+      "snr_db": 5.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 0.9916666666666667,
+        "f1_macro": 0.9916614550760893
+      },
+      "denoised": {
+        "accuracy": 0.9916666666666667,
+        "f1_macro": 0.9916614550760893
+      },
+      "f1_improvement": 0.0
+    },
+    "10": {
+      "snr_db": 10.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 0.9916666666666667,
+        "f1_macro": 0.9916614550760893
+      },
+      "denoised": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "f1_improvement": 0.008338544923910729
+    },
+    "15": {
+      "snr_db": 15.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "denoised": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "f1_improvement": 0.0
+    },
+    "20": {
+      "snr_db": 20.0,
+      "sample_count": 120,
+      "raw": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "denoised": {
+        "accuracy": 1.0,
+        "f1_macro": 1.0
+      },
+      "f1_improvement": 0.0
+    }
+  },
+  "classes": [
+    "bird_call",
+    "chainsaw",
+    "forest_ambience",
+    "gunshot",
+    "rain",
+    "wind"
+  ]
+}

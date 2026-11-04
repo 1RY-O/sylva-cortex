@@ -16,3 +16,6 @@ As per SPEC.md guardrails and rubric requirements, this document records known f
 - **Class Imbalance:** Threat events (gunshots, chainsaws) are rare events relative to wind, rain, and insect chorus.
 - **Context Multiplier Sensitivity:** Context modifiers (e.g., night core zone multiplier = 1.30) assume accurate situational awareness (time and GPS zone). Misconfigured geolocation could artificially inflate or depress alarm thresholds.
 - **Operator Feedback Latency:** The adaptive proportional controller for decision thresholds relies on timely operator confirmation or dismissal. In intermittent-connectivity scenarios, threshold updates will lag.
+
+## 4. Dataset & Network-Isolation Constraints
+- **Offline Synthetic Placeholder Set:** Due to hackathon network-isolation constraints, real raw gigabyte corpora (ESC-50, UrbanSound8K, FSD50K) are registered with reproducible download scripts (`scripts/download_data.py`), but offline evaluation currently uses a synthetic physical model placeholder set (286 clips, seed 1337) to benchmark DSP and SNR degradation without network calls.

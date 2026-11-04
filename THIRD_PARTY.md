@@ -35,3 +35,14 @@ This document records all third-party software, libraries, and dataset sources u
 | Vite | MIT | Frontend build tool |
 | Tailwind CSS | MIT | Utility-first CSS framework |
 | ONNX Runtime Web | MIT | In-browser model inference |
+
+
+## 4. Offline Test Data & Synthetic Placeholder Dataset
+
+> [!IMPORTANT]
+> **Network-Isolation Constraint Documentation:**
+> In compliance with the offline development and testing constraints (zero external network calls during judging/test execution), full gigabyte-scale raw audio corpora (ESC-50, UrbanSound8K, FSD50K) are not pulled over the network.
+> 
+> Instead, `scripts/download_data.py` defines official download targets and licence terms, while generating deterministic, physically modeled acoustic seed waveforms (`data/raw/*`, excluded from version control). `scripts/make_mixed_set.py` uses these physical models (1/f forest ambience, harmonic comb chainsaws, transient gunshot shockwaves) with `seed=1337` to generate 286 controlled SNR sweep mixtures in `data/samples/` (< 20 MB total) registered in `data/manifest.csv`.
+> 
+> This limitation is explicitly acknowledged: the synthetic test set serves to validate the mathematical and algorithmic integrity of the DSP pipeline, SNR degradation curves, and agent policy before external field datasets are mounted.

@@ -1,0 +1,456 @@
+{
+  "experiment": "E1_baseline_snr_sweep",
+  "description": "Baseline GBDT classifier precision, recall, and F1 across SNR sweep (-10 to +20 dB)",
+  "overall": {
+    "total_samples": 846,
+    "accuracy": 0.9881796690307328,
+    "f1_macro": 0.9881708691867518,
+    "f1_weighted": 0.9881708691867518,
+    "precision_macro": 0.988228313346942,
+    "recall_macro": 0.9881796690307328
+  },
+  "by_snr": {
+    "-10": {
+      "snr_db": -10.0,
+      "sample_count": 120,
+      "accuracy": 0.95,
+      "precision_macro": 0.9551728464771944,
+      "recall_macro": 0.9499999999999998,
+      "f1_macro": 0.9498115968247621,
+      "per_class": {
+        "bird_call": {
+          "f1": 0.9743589743589743,
+          "precision": 1.0,
+          "recall": 0.95,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 0.918918918918919,
+          "precision": 1.0,
+          "recall": 0.85,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 0.975609756097561,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 0.9473684210526315,
+          "precision": 1.0,
+          "recall": 0.9,
+          "support": 20
+        },
+        "rain": {
+          "f1": 0.9523809523809523,
+          "precision": 0.9090909090909091,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 0.9302325581395349,
+          "precision": 0.8695652173913043,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "-5": {
+      "snr_db": -5.0,
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "0": {
+      "snr_db": 0.0,
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "5": {
+      "snr_db": 5.0,
+      "sample_count": 120,
+      "accuracy": 0.9916666666666667,
+      "precision_macro": 0.9920634920634921,
+      "recall_macro": 0.9916666666666667,
+      "f1_macro": 0.9916614550760893,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 0.975609756097561,
+          "precision": 0.9523809523809523,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 0.9743589743589743,
+          "precision": 1.0,
+          "recall": 0.95,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "10": {
+      "snr_db": 10.0,
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "15": {
+      "snr_db": 15.0,
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    },
+    "20": {
+      "snr_db": 20.0,
+      "sample_count": 120,
+      "accuracy": 1.0,
+      "precision_macro": 1.0,
+      "recall_macro": 1.0,
+      "f1_macro": 1.0,
+      "per_class": {
+        "bird_call": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "chainsaw": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "forest_ambience": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "gunshot": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "rain": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        },
+        "wind": {
+          "f1": 1.0,
+          "precision": 1.0,
+          "recall": 1.0,
+          "support": 20
+        }
+      }
+    }
+  },
+  "by_class": {
+    "bird_call": {
+      "precision": 0.9858156028368794,
+      "recall": 0.9858156028368794,
+      "f1": 0.9858156028368794,
+      "support": 141
+    },
+    "chainsaw": {
+      "precision": 0.9928057553956835,
+      "recall": 0.9787234042553191,
+      "f1": 0.9857142857142858,
+      "support": 141
+    },
+    "forest_ambience": {
+      "precision": 0.9929078014184397,
+      "recall": 0.9929078014184397,
+      "f1": 0.9929078014184397,
+      "support": 141
+    },
+    "gunshot": {
+      "precision": 0.9928057553956835,
+      "recall": 0.9787234042553191,
+      "f1": 0.9857142857142858,
+      "support": 141
+    },
+    "rain": {
+      "precision": 0.986013986013986,
+      "recall": 1.0,
+      "f1": 0.9929577464788732,
+      "support": 141
+    },
+    "wind": {
+      "precision": 0.9790209790209791,
+      "recall": 0.9929078014184397,
+      "f1": 0.9859154929577465,
+      "support": 141
+    }
+  },
+  "confusion_matrix": {
+    "classes": [
+      "bird_call",
+      "chainsaw",
+      "forest_ambience",
+      "gunshot",
+      "rain",
+      "wind"
+    ],
+    "matrix": [
+      [
+        139,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      [
+        0,
+        138,
+        0,
+        0,
+        0,
+        3
+      ],
+      [
+        1,
+        0,
+        140,
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        1,
+        0,
+        138,
+        2,
+        0
+      ],
+      [
+        0,
+        0,
+        0,
+        0,
+        141,
+        0
+      ],
+      [
+        1,
+        0,
+        0,
+        0,
+        0,
+        140
+      ]
+    ]
+  },
+  "cv_5fold": {
+    "n_splits": 5,
+    "fold_accuracies": [
+      0.9941176470588236,
+      0.9881656804733728,
+      0.9881656804733728,
+      0.9940828402366864,
+      0.9763313609467456
+    ],
+    "mean_accuracy": 0.9881726418378001,
+    "std_accuracy": 0.006488290410489296,
+    "fold_f1_macro": [
+      0.9941520467836257,
+      0.9882985939247283,
+      0.9880783251285777,
+      0.9941520467836257,
+      0.9762778012021811
+    ],
+    "mean_f1_macro": 0.9881917627645477,
+    "std_f1_macro": 0.006527123903829944,
+    "mean_f1_weighted": 0.9881454432959181
+  }
+}
